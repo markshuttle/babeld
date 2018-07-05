@@ -1,0 +1,14 @@
+name: babeld #
+version: '1.8.2' # just for humans, typically '1.2+git' or '1.3.2'
+summary: Babel is a loop-avoiding distance-vector routing protocol
+description: |
+    Babel is a mesh-oriented routing protocol that is in the process of
+    becoming an IETF standard.
+
+grade: devel # must be 'stable' to release into candidate/stable channels
+confinement: devmode # use 'strict' once you have the right plugs and slots
+
+parts:
+  babeld:
+    # See 'snapcraft plugins'
+    plugin: autotools
