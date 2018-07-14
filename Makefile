@@ -1,4 +1,9 @@
+ifdef DESTDIR
+PREFIX = $(DESTDIR)
+else
 PREFIX = /usr/local
+endif
+
 MANDIR = $(PREFIX)/share/man
 
 CDEBUGFLAGS = -Os -g -Wall
