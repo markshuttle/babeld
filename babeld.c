@@ -71,8 +71,8 @@ int random_id = 0;
 int do_daemonise = 0;
 int skip_kernel_setup = 0;
 const char *logfile = NULL,
-    *pidfile = "/var/run/babeld.pid",
-    *state_file = "/var/lib/babel-state";
+    *pidfile = "/var/snap/babeld-sabdfl/common/babeld.pid",
+    *state_file = "/var/snap/babeld-sabdfl/common/babel-state";
 
 unsigned char *receive_buffer = NULL;
 int receive_buffer_size = 0;
