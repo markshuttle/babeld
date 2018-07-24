@@ -11,8 +11,8 @@ confinement: strict
 apps:
   babeld:
     daemon: simple
-    command: bin/babeld
-    plugs: [ network, network-bind, network-control, network-observe ]
+    command: bin/babeld -c /var/snap/babeld-sabdfl/common/babeld.conf
+    plugs: [ network, network-bind, firewall-control ]
 
 parts:
   babeld:
