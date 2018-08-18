@@ -46,13 +46,14 @@ babeld.html: babeld.man
 all: babeld babeld.man
 
 install.minimal: babeld
-	-rm -f $(TARGET)$(PREFIX)/bin/babeld
+	rm -f $(TARGET)$(PREFIX)/bin/babeld
 	mkdir -p $(TARGET)$(PREFIX)/bin
 	cp -f babeld $(TARGET)$(PREFIX)/bin
 
 install: install.minimal all
 	mkdir -p $(TARGET)$(MANDIR)/man8
 	cp -f babeld.man $(TARGET)$(MANDIR)/man8/babeld.8
+	cp -f launch.sh $(TARGET)$(PREFIX)/bin
 
 uninstall:
 	-rm -f $(TARGET)$(PREFIX)/bin/babeld

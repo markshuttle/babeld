@@ -5,14 +5,14 @@ description: |
     Babel is a mesh-oriented routing protocol that is in the process of
     becoming an IETF standard.
 
-grade: devel # must be 'stable' to release into candidate/stable channels
+grade: stable
 confinement: strict
 
 apps:
   babeld:
     daemon: simple
-    command: bin/babeld -c /var/snap/babeld-sabdfl/common/babeld.conf
-    plugs: [ network, network-bind, firewall-control ]
+    command: bin/launch.sh
+    plugs: [ network, network-bind, network-control, firewall-control ]
 
 parts:
   babeld:
