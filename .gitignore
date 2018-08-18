@@ -11,3 +11,8 @@ tags
 *.orig
 *~
 \#*#
+snap/.snapcraft
+parts/babeld
+*.snap
+prime
+stage
