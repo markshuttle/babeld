@@ -13,6 +13,7 @@ if [ ! -e $SNAP_COMMON/babeld.conf ]; then
     /bin/cat <<EOM >$SNAP_COMMON/babeld.conf
 # For more information about this configuration file, refer to
 # https://www.irif.fr/~jch/software/babel/babeld.html
+pid-file /var/snap/babeld-sabdfl/common/babeld.pid
 log-file /var/snap/babeld-sabdfl/common/babeld.log
 state-file /var/snap/babeld-sabdfl/common/babeld.state
 link-detect true

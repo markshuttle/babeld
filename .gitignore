@@ -14,5 +14,6 @@ tags
 snap/.snapcraft
 parts/babeld
 *.snap
+*.snap.xdelta3
 prime
 stage
