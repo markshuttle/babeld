@@ -1,5 +1,4 @@
 PREFIX = /usr/local
-
 MANDIR = $(PREFIX)/share/man
 
 CDEBUGFLAGS = -Os -g -Wall
