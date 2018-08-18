@@ -21,4 +21,4 @@ interface eth0 type wired rxcost 100
 redistribute local deny
 EOM
 fi
-exec babeld -c $SNAP_COMMON/babeld.conf
+exec $SNAP/babeld -c $SNAP_COMMON/babeld.conf

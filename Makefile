@@ -53,7 +53,6 @@ install.minimal: babeld
 install: install.minimal all
 	mkdir -p $(TARGET)$(MANDIR)/man8
 	cp -f babeld.man $(TARGET)$(MANDIR)/man8/babeld.8
-	cp -f launch.sh $(TARGET)$(PREFIX)/bin
 
 uninstall:
 	-rm -f $(TARGET)$(PREFIX)/bin/babeld

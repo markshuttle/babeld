@@ -11,10 +11,13 @@ confinement: strict
 apps:
   babeld:
     daemon: simple
-    command: bin/launch.sh
+    command: launch.sh
     plugs: [ network, network-bind, network-control, firewall-control ]
 
 parts:
   babeld:
     # See 'snapcraft plugins'
     plugin: make
+    artifacts:
+      - babeld
+      - launch.sh
