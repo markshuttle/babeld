@@ -22,7 +22,7 @@ parts:
   babeld:
     # See 'snapcraft plugins'
     plugin: make
+    source: .
     build-packages: [ build-essential ]
     artifacts:
       - babeld
-      - launch.sh
