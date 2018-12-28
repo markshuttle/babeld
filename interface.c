@@ -68,8 +68,8 @@ add_interface(char *ifname, struct interface_conf *if_conf)
         if(strcmp(ifp->name, ifname) == 0) {
             if(if_conf)
                 fprintf(stderr,
-                        "Warning: attempting to add existing interface, "
-                        "new configuration ignored.\n");
+                        "Warning: attempting to add existing interface (%s), "
+                        "new configuration ignored.\n", ifname);
             return ifp;
         }
     }
@@ -114,8 +114,6 @@ flush_interface(char *ifname)
         prev->next = ifp->next;
     else
         interfaces = ifp->next;
-
-    local_notify_interface(ifp, LOCAL_FLUSH);
 
     if(ifp->conf != NULL && ifp->conf != default_interface_conf)
         flush_ifconf(ifp->conf);
